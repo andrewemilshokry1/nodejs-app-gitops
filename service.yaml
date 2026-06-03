@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: profile-app
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   selector:
     app: profile-app
   ports:
     - name: http
-      port: {{ .Values.service.port }}
+      port: 3000
       targetPort: 3000
-      nodePort: {{ .Values.service.nodePort }}
+      nodePort: 30090
