@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: profile-app
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 3
   selector:
     matchLabels:
       app: profile-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: profile-app
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "ghcr.io/andrewemilshokry1/profile-product:12"
           ports:
             - containerPort: 3000
           env:
