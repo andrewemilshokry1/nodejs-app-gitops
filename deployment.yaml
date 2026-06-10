@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: profile-product
-          image: 192.168.1.12:8082/profile-product:1
+          image: 192.168.1.12:8082/profile-product:latest
           ports:
             - containerPort: 3000
